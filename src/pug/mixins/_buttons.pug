@@ -1,2 +1,12 @@
 mixin button(text, link)
-	a(class="button" href= link)&attributes(attributes) #{text}
+	if link
+		a(class="button" href= link)&attributes(attributes) #{text}
+	else
+		a(class="button" href="#!")&attributes(attributes) #{text}
+	
+
+mixin button_primary(text, link)
+	if link
+		a(class="button button--primary" href= link)&attributes(attributes) #{text}
+	else
+		a(class="button button--primary" href="#!")&attributes(attributes) #{text}

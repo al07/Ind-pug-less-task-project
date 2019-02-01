@@ -1,0 +1,26 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Textarea - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.main-wrapper
+		.container.container--left.user-content.pt-35
+			h1 Многострочное поле ввода
+			//a.button Предыдущий пост
+			//a.button.button--primary Опубликовать
+
+			.section-ui
+				+textarea("Я тоже там был, вот мои впечатления")
+			pre.
+				+textarea("Я тоже там был, вот мои впечатления")
+			
+			.title mixins/_textarea.pug
+			pre.
+				mixin textarea(placeholder)
+					if placeholder
+						textarea.textarea(placeholder= placeholder)
+					else
+						textarea.textarea
+

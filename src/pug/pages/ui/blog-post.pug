@@ -1,0 +1,25 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Пост в блоге - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.main-wrapper
+		.container.container--left.user-content.pt-35
+			h1 Пост в блоге
+			.section_ui
+				include ../../sections/blog-post.pug
+			pre.
+				include ../../sections/blog-post.pug
+			
+			.title sections/blog-post.pug
+			pre.
+				.blog-post
+					.blog-post__date 16 марта 2017 года
+					h1.blog-post__title Национальный парк Йосемити
+					img(src="../img/blog/post-img.jpg").blog-post__img
+					.blog-post__content
+						p Парк находится в горах #[a(href="#!") Сьерра-Невада] на ...
+						p Центром парка является долина #[a(href="#!") Йосемити], ...
+
